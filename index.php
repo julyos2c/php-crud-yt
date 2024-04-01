@@ -19,7 +19,7 @@ include "db_conn.php";
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <title>PHP CRUD Operation</title>
+  <title>CRUD Operation</title>
 </head>
 
 <body>
@@ -39,7 +39,7 @@ include "db_conn.php";
     ?>
     <a href="add-new.php" class="btn btn-dark mb-3">Add Me</a>
 
-    <table id="myTable" class="table table-hover text-center">
+    <table id="table" class="table table-hover text-center">
       <thead class="table-dark">
         <tr>
           <th scope="col">ID</th>
@@ -63,8 +63,8 @@ include "db_conn.php";
             <td><?php echo $row["email"] ?></td>
             <td><?php echo $row["gender"] ?></td>
             <td>
-              <a href="edit.php?id=<?php echo $row["id"] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
-              <a href="delete.php?id=<?php echo $row["id"] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
+              <a href="edit.php?id=<?php echo $row["id"] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-10 me-3"></i></a>
+              <a href="delete.php?id=<?php echo $row["id"] ?>" class="link-dark"><i class="fa-solid fa-trash fs-10"></i></a>
             </td>
           </tr>
         <?php
@@ -84,7 +84,7 @@ include "db_conn.php";
 
 <script>
   $(document).ready( function () {
-    $('#myTable').DataTable();
+    $('#table').DataTable();
   });
 </script>
 

@@ -13,7 +13,6 @@ if (isset($_POST["submit"])) {
 
    if ($result) {
       header("Location: index.php?msg= New record created Successfully");
-      
    } else {
       echo "Failed: " . mysqli_error($conn);
    }
